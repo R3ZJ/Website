@@ -1,0 +1,220 @@
+        body {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        
+        .about-bus{
+            /* backdrop-filter: blur(12px); */
+            text-align: center;
+            font-family: 'Roboto';
+            font-size: large;
+            font-weight: bold;
+        }
+        
+        .homepage-contact-us-button{
+            backdrop-filter: blur(12px);
+            font-size:24px;
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            margin: 20px;
+            display: flex;
+            color: white;
+            align-items: center;
+            background-color: rgb(0 0 0 / 50%);
+        }
+        
+        .contact-us-div{
+          
+            display: flex;
+            justify-content: center;
+            align-items: center;
+       
+            
+        }
+        header{
+            margin: 0;
+            position: sticky;
+            border-style: none;
+            background-color: rgb(0 0 0 / 50%);
+            display: flex;
+          
+           
+        }
+       nav {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        
+       }
+       .center-logo{
+        display: flex;
+        margin: 30px;
+        justify-content: center;
+       }
+        .header-image {
+            margin: .25%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            
+        }
+        nav ul {            
+           display: flex;
+            list-style: none;
+            justify-content: flex-end;
+            margin-right: 50px;
+            padding: 10px;
+        }
+        nav ul li {
+            
+         margin-left: 50px;
+        }
+        nav ul li a {
+            font-weight: bold;
+            font-family: 'Roboto';
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+        color: #ffd700;
+        }
+       
+        .column-bg,
+        .background-box{
+        
+            backdrop-filter: blur(12px);
+            background-color: rgb(0 0 0 / 50%); 
+            border-style: hidden; 
+            border-radius: 10px;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .services-column h1 {
+            text-align: center;
+        }
+        .services-column{
+            
+            justify-content: center;
+            align-items: center;
+        }
+        .right-services-column,
+        .left-services-column
+        {
+            
+            flex: 1;
+            min-width: 250px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 20px;
+            
+        }
+
+        /* REVIEW SECTION */
+        .review-placard {
+            border: 2px solid black;
+            display: flex;
+            background-color: rgb(0 0 0 / 100%);
+            padding: 10px;
+            margin: 20px;
+            flex-direction: column;
+          
+            border-radius: 10px;
+        }
+         .review-placard-header{
+            display: flex;
+            flex-direction: row;
+        }
+        .review-placard-header-time{
+            display: flex;
+            justify-content: right;
+            align-items: flex-end;
+            gap: 10px;
+            
+        }
+        .customer-reviews {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            gap: 30px;
+        }
+        .review-placard-body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        .lrb-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .services,
+        .reviews-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            gap: 30px;
+            font-family: 'Roboto', sans-serif;
+        }
+        /***********************************************************/
+
+
+        .row {
+           
+            padding: 10px;
+        }
+        @media screen and (max-width: 768px) {
+            .services{
+                flex-direction: column; 
+                align-items: center; 
+                justify-content: center;
+            }
+            .main-logo{
+                align-items: center;
+                height: 80%;
+                width: 80%;
+            }
+            nav {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            nav ul {
+                display: flex;
+                justify-content: center;
+                margin: 10px;
+            }
+            nav ul li {
+            
+         margin-left: 25px;
+        }
+           body {
+             font-size: 18px; 
+             margin: 0;
+            padding: 0;
+            border-style: none;
+            color: white;
+                }
+            .header{
+                margin: 0;
+                padding: 0;
+            }
+           .header-image{
+            display: none;
+           }
+            
+            
+        }  
