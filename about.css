@@ -47,14 +47,13 @@ P {
 
     font-weight: bold;
     font-size: 18px; 
-    margin: 0;
-    padding: 0%;
+   
     border-style: none;
     color: white;
     font-family: 'Roboto', sans-serif;
 }
 .hours-content {
-    padding-top: 2%;
+    padding: 2%;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -82,4 +81,15 @@ border-radius: 16px;
 }
 .hours-right p{
     font-size: 12px;
+}
+.footer-container {
+    display: flex;
+    padding: 5%;
+     background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1;
+    flex-direction: row;
+    justify-content: center;
+}
+.contact-container {
+    justify-content: left;
 }
