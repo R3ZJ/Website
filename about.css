@@ -94,3 +94,15 @@ border-radius: 16px;
 .contact-container {
     justify-content: left;
 }
+.contact-container{
+    padding-right: 50%;
+}
+.address-container p{
+    align-content: end;
+    opacity: 50%;
+    font-weight: 100;
+}
+.address-container{
+    display: flex;
+    flex-direction: column;
+}
