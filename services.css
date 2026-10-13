@@ -1,12 +1,28 @@
 .main-box {
     display: flex;
     align-items: center;
+    color: white;
     background-color: rgb(0 0 0 / 50%); 
-    height: 60vh; 
-    flex-direction: column;         /* Stacks items vertically */
-    justify-content: flex-start;    /* Pushes content to the top */
+    height: 60vh;         /* Stacks items vertically */
+    justify-content: center;    /* Pushes content to the top */
     border: 1px solid #000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 10%;
-
+}
+.services {
+  display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+}
+.service-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
