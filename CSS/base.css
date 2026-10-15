@@ -32,7 +32,6 @@ body {
             border-style: none;
             background-color: rgb(0 0 0 / 50%);
             display: flex;
-          
            
         }
 
@@ -48,7 +47,10 @@ body {
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
-            
+            min-height: 40px;
+            max-height: 70px;
+            max-width: 120px;
+            min-width: 300px;
         }
         nav ul {
            display: flex;

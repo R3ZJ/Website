@@ -1,0 +1,12 @@
+.underconstruction-text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 120px;
+        font-weight: bold;
+       
+}
+
+.construction-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
