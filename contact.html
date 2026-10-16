@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="scaling-background">
 <header class="header">
         
         <img src="https://i.imgur.com/yCaJALc.png" height="15%" width="15%" alt="Red Den Studios" class="header-image"/>
@@ -27,8 +28,47 @@
         </nav>
         
     </header>
-    <div class="construction-container">
-    <h1 class="underconstruction-text" alt="Page Under Construction"><img src="img/traffic_cone.png" height="85"/>  Page Under<br>Construction!</h1>
+    <div class="contact-form-container">
+        <h2>Contact Us</h2>
+        <form action="/submit-form-endpoint" method="POST">
+<div>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+        </div>
+
+        <!-- Email Field (auto-validates email formatting) -->
+        <div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+        </div>
+
+        <!-- Message Field -->
+        <div>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+            <button type="submit">Send Message</button>
+        </div>
+        </form>
+
+
+    </div>
+</div>
+<div class="footer-container">
+      <div class="contact-container">
+        <a href="tel:1234567890"> +1 (123)-456-7890 </p>
+        
+      </div>
+      <div class="address-container">
+      <a href="https://maps.app.goo.gl/nwEr83Qa9PujrJp76">1 Dr Carlton B Goodlett Pl, San Francisco, CA 94102</a>
+      
+      
+        <p>Copyright Red Den Studios 2026 </p>
+      </div>
+      
     </div>
 </body>
 </html>

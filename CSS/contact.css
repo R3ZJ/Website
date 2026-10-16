@@ -1,5 +1,5 @@
 .underconstruction-text {
-        font-family: 'Roboto', sans-serif;
+       
         font-size: 120px;
         font-weight: bold;
        
@@ -9,4 +9,156 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 35px;
+    box-sizing: border-box;
+
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.contact-form-container h2 {
+    margin: 0 0 30px;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.contact-form-container h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    margin: 12px auto 0;
+    background: #38bdf8;
+    border-radius: 5px;
+}
+
+/* Form Groups */
+.contact-form-container form > div {
+    margin-bottom: 22px;
+}
+
+/* Labels */
+.contact-form-container label {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+/* Text Inputs and Textarea */
+.contact-form-container input,
+.contact-form-container textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px 16px;
+
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 9px;
+
+    outline: none;
+    transition: border-color 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+/* Placeholder Text */
+.contact-form-container input::placeholder,
+.contact-form-container textarea::placeholder {
+    color: #9ca3af;
+}
+
+/* Focus Effects */
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+    border-color: #38bdf8;
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+/* Message Field */
+.contact-form-container textarea {
+    min-height: 150px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* Submit Button */
+.contact-form-container button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: 8px;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+
+    background: linear-gradient(135deg, #0284c7, #2563eb);
+    border: none;
+    border-radius: 9px;
+
+    cursor: pointer;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                filter 0.2s ease;
+}
+
+/* Button Hover */
+.contact-form-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+    filter: brightness(1.15);
+}
+
+/* Button Press */
+.contact-form-container button:active {
+    transform: translateY(0);
+}
+
+/* Keyboard Accessibility */
+.contact-form-container button:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 4px;
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+    .contact-form-container {
+        width: calc(100% - 30px);
+        margin: 30px auto;
+        padding: 24px 20px;
+    }
+
+    .contact-form-container h2 {
+        font-size: 26px;
+    }
 }
