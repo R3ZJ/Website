@@ -1,62 +1,24 @@
-// 1. Define your gallery data source
-const images = [
-  { src: 'img/cloud-solutions.jpg', alt: 'Cloud Solutions Logo' },
-  { src: 'img/cybersecurity.jpg', alt: 'Cybersecurity Photo' },
-  { src: 'img/software-development.jpg', alt: 'Software Development' },
-  { src: 'img/it-infrastructure.jpeg', alt: 'IT Infrastructure' }
-];
+function expandIMG(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
 
-const galleryGrid = document.getElementById('galleryGrid');
-const lightboxModal = document.getElementById('lightboxModal');
-const lightboxImg = document.getElementById('lightboxImg');
-const lightboxCaption = document.getElementById('lightboxCaption');
-const closeBtn = document.getElementById('closeBtn');
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
 
-// 2. Dynamically render images into the DOM
-function initGallery() {
-  const fragment = document.createDocumentFragment();
-  
-  images.forEach(image => {
-    const imgEl = document.createElement('img');
-    imgEl.src = image.src;
-    imgEl.alt = image.alt;
-    imgEl.classList.add('gallery-item');
-    fragment.appendChild(imgEl);
-  });
-  
-  galleryGrid.appendChild(fragment);
+    expandImg.parentElement.style.display = "block";
+
+    var paragraph = imgs.nextElementSibling;
+
+    if (paragraph && paragraph.classList.contains("imgs-text")) {
+        paragraph.classList.add("expanded");
+    }
 }
+function closeIMG() {
+    // Hide the expanded image container
+    document.getElementById("expanded-container").style.display = "none";
 
-// 3. Open Lightbox using Event Delegation
-galleryGrid.addEventListener('click', (e) => {
-  if (e.target.classList.contains('gallery-item')) {
-    lightboxModal.style.display = 'flex';
-    lightboxImg.src = e.target.src;
-    lightboxImg.alt = e.target.alt;
-    lightboxCaption.textContent = e.target.alt;
-  }
-});
-
-// 4. Close Lightbox Event Handlers
-function closeLightbox() {
-  lightboxModal.style.display = 'none';
+    // Hide all expanded paragraphs
+    document.querySelectorAll(".imgs-text.expanded").forEach(function (paragraph) {
+        paragraph.classList.remove("expanded");
+    });
 }
-
-closeBtn.addEventListener('click', closeLightbox);
-
-// Close if user clicks outside the image container
-lightboxModal.addEventListener('click', (e) => {
-  if (e.target === lightboxModal) {
-    closeLightbox();
-  }
-});
-
-// Close via keyboard Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && lightboxModal.style.display === 'flex') {
-    closeLightbox();
-  }
-});
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', initGallery);

@@ -1,11 +1,15 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  color: white;
 
+}
 .main-box {
-    display: grid;
+      display: grid;
     grid-template-columns: 1fr;
     color: white;
     background-color: rgb(0 0 0 / 50%);
-    margin: 10%;
-    gap: 30px;
+    margin:10%;
+    width: auto;
      backdrop-filter: blur(12px);
      border-style: hidden; 
             border-radius: 10px;
@@ -21,7 +25,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.gallery{
 
+}
 .services {
     display: flex;
     flex-direction: row;
@@ -49,67 +55,81 @@
 }
 
 
-/* Responsive Grid */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  padding: 16px;
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
 }
 
-.gallery-item {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
   cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.gallery-item:hover {
-  transform: scale(1.03);
-  filter: brightness(0.9);
-}
-
-/* Lightbox Styling */
-.lightbox-modal {
-  display: none; /* Hidden by default */
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  justify-content: center;
-  align-items: center;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.imgs-text {
+    display: none;
+    max-height: 200px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.imgs-text.expanded {
+    display: block;
+    opacity: 1;
+}
+
+.closebtn {
+  display: inline-block;
+    width: fit-content;
+    position: absolute;
+    font-size: 40px;
+    line-height: 1;
+    padding: 8px 12px;
+    top: 1%;
+    right: 11%;
+    cursor: pointer;
+}
+
+.services-img-container {
+    display: none;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+#expandedImg {
+  display: flex;
   flex-direction: column;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+#expanded-container {
+    position: relative;
+    text-align: center;
 }
 
-.lightbox-content {
-  max-width: 85%;
-  max-height: 80%;
-  border-radius: 4px;
-  animation: zoomIn 0.3s ease;
-}
-
-.lightbox-caption {
-  color: #fff;
-  margin-top: 15px;
-  font-family: sans-serif;
-  font-size: 1.1rem;
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-@keyframes zoomIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+#imgtext {
+    color: white;
+    padding: 10px;
+    text-align: center;
 }

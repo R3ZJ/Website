@@ -34,20 +34,37 @@
           <div class="title">
           <h1>Services</h1>
         </div>
-        <div class="services-gallery">
-          <!-- Gallery Container -->
-<div class="gallery-grid" id="galleryGrid"></div>
-
-<!-- Lightbox Modal Overlay -->
-<div class="lightbox-modal" id="lightboxModal">
-  <span class="close-btn" id="closeBtn">&times;</span>
-  <img class="lightbox-content" id="lightboxImg" src="" alt="">
-  <div class="lightbox-caption" id="lightboxCaption"></div>
+          <div class="gallery">
+            <script src="service.js"></script>
+            <div class="row">
+  <div class="column">
+    <img src="img/cloud-solutions.jpg" alt="Cloud solutions, deployment, and server management." onclick="expandIMG(this);">
+  </div>
+  <div class="column">
+    <img src="img/cybersecurity.jpg" alt="Security hardening, assessments, and secure systems." onclick="expandIMG(this);">
+  </div>
+  <div class="column">
+    <img src="img/it-infrastructure.jpeg" alt="Custom RMM tools, monitoring scripts, and IT automation solutions." onclick="expandIMG(this);">
+  </div>
+  <div class="column">
+    <img src="img/software-development.jpg" alt="Custom applications and software tailored to your business needs." onclick="expandIMG(this);">
+  </div>
 </div>
-          
-         
+
+<!-- The expanding image container -->
+<div id="expanded-container" style="display: none;">
+    <span class="closebtn" onclick="closeIMG()">&times;</span>
+
+    <img id="expandedImg" style="width: 80%;">
+
+    <div id="imgtext"></div>
+</div>
+
         </div>
-<div class="footer-container">
+
+   </main>
+   </div>
+   <div class="footer-container">
       <div class="contact-container">
         <a href="tel:1234567890"> +1 (123)-456-7890 </p>
         
@@ -60,7 +77,5 @@
       </div>
       
     </div>
-   </main>
-   </div>
   </body>
 </html>
